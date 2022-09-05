@@ -1,5 +1,7 @@
 # odc-exam
-A repository made for the sole purpose of the exam
+A repository made for the sole purpose of the exam.
+
+I have used PHP as a backend programming language and HTML,CSS,Bootstrap as a frontend language
 
 database.php - Performs the connection to the MySQL server.
 login.php - The login page. Queries the database and validates the login.
