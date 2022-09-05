@@ -33,13 +33,14 @@
     $gender = $_POST['gender'];
     $pass = $_POST['pass1'];
     $date = $_POST['date'];
+    $address = $_POST['address'];
 
     if ($op=="save")
     {
         // echo "$name - $email - $phone - $pass";
 
          $sql = "INSERT INTO users (firstname,lastname,email,username,password,phone,gender,date_of_birth,addresss)
-                  VALUES ('$firstname','$e','$phone',PASSWORD('$pass'))";
+                  VALUES ('$firstname','$lastname','$email','$phone','$gender','$pass','$date','$address'";
          mysqli_query($link,$sql);
 
          if (mysqli_error())  echo "MySQL Error: " . mysqli_error();
@@ -88,10 +89,14 @@
                 <label>Email:</label>
                 <input type="text" class="form-control" name="email" required/>
             </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" class="form-control" name="address" required/>
+            </div>
 
             <div class="form-group">
-                <label>Gender:</label>
-                <input type="radio" name="gender" value="Male">Male
+                <label>Gender:</label>&nbsp;
+                <input type="radio" name="gender" value="Male">Male&nbsp;
                 <input type="radio" name="gender" value="Female">Female
             </div>
 
